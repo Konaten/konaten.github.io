@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #5a67d8;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.menu-container {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover .menu-icon {
+    transform: rotate(90deg);
+}
+
+.menu-content {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 180px;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: 
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu:hover .menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-content a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.menu-content a:hover {
+    background-color: #f0f4ff;
+    border-left: 3px solid #5a67d8;
+    padding-left: 1.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    flex: 1;
+}
+
+.class-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.class-card:hover {
+    transform: scale(1.05);
+}
+
+.class-card h2 {
+    background-color: #5a67d8;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.class-card p {
+    padding: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.emoji {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #5a67d8;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+article {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}

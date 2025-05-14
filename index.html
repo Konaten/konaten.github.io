@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code</title>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-</head>
-<body>
-    <div id="qrcode"></div>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Types de Danse</title>
     <script>
-        QRCode.toCanvas(document.getElementById('qrcode'), 'https://github.com/Konaten/konaten.github.io', function (error) {
-            if (error) console.error(error);
-            console.log('QR Code généré!');
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../components/menu.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("menu-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du menu :", error));
         });
     </script>
+</head>
+<body>
+    <header>
+        <div id="menu-placeholder" class="menu-container"></div>
+        <h1>Découvrez Nos Activités de Danse</h1>
+    </header>
+    <main>
+        <a href="pages/pilates.html" class="class-card">
+            <h2><span class="emoji">🧘‍♀️</span> Pilates</h2>
+            <p>Renforcez votre corps en douceur ! Le Pilates allie respiration, posture et gainage pour améliorer votre tonicité, votre souplesse et soulager les tensions. Accessible à tous, idéal pour se recentrer et se sentir bien dans son corps.</p>
+        </a>
+        <a href="pages/zumba-fitness.html" class="class-card">
+            <h2><span class="emoji">🕺</span> Zumba Fitness</h2>
+            <p>Bougez, transpirez, souriez ! Sur des rythmes endiablés (latino, afro, pop...), la Zumba est un cocktail explosif de danse, cardio et fun. Un moment 100% énergie pour se défouler et brûler des calories... sans s'en rendre compte !</p>
+        </a>
+        <a href="pages/zumba-kids.html" class="class-card">
+            <h2><span class="emoji">🧒</span> Zumba Kids (7 à 16 ans)</h2>
+            <p>Danser, s'exprimer et s'éclater ! Adaptée aux plus jeunes, la Zumba Kids mêle mouvements de danse, jeux et coordination sur des musiques dynamiques. Parfait pour bouger en s'amusant, gagner en confiance et créer du lien.</p>
+        </a>
+        <a href="pages/fluidanse.html" class="class-card">
+            <h2><span class="emoji">💃</span> Flui'danse</h2>
+            <p>Un mouvement fluide, élégant et libérateur. Flui'danse allie mouvement, légèreté et conscience corporelle dans une ambiance apaisante. Cette pratique invite à une danse douce, fluide et expressive. Elle favorise la posture, la mobilité du haut du corps et la détente mentale. Un véritable moment de douceur et de recentrage.</p>
+        </a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Association de Danse</p>
+    </footer>
 </body>
 </html>

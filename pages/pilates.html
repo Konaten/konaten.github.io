@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Pilates</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../components/menu.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("menu-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du menu :", error));
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu-placeholder" class="menu-container"></div>
+        <h1>🧘‍♀️ Pilates</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Renforcez votre corps en douceur</h2>
+            <p>
+                Le Pilates est une méthode d'exercice douce et efficace qui allie respiration, posture, et gainage. 
+                Il est conçu pour améliorer votre tonicité, votre souplesse et soulager les tensions. 
+                Accessible à tous, cette pratique est idéale pour se recentrer et se sentir bien dans son corps.
+            </p>
+            <p>
+                Les cours de Pilates sont adaptés aux débutants comme aux pratiquants confirmés. 
+                Venez découvrir comment améliorer votre posture, renforcer vos muscles profonds, 
+                et profiter d'un moment de calme et de bien-être.
+            </p>
+            <img src="../assets/images/pilates.jpg" alt="Cours de Pilates" style="width: 25%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 Association de Danse</p>
+    </footer>
+</body>
+</html>
