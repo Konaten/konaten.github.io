@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <title>Pilates</title>
+    <title>STAR - Self Transcendence and Relaxation</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch("../components/menu.html")
@@ -13,12 +13,20 @@
                     document.getElementById("menu-placeholder").innerHTML = data;
                 })
                 .catch(error => console.error("Erreur lors du chargement du menu :", error));
+                
+            fetch("../components/button-inscription.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("inscription-button-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du bouton d'inscription :", error));
         });
     </script>
 </head>
 <body>
     <header>
         <div id="menu-placeholder" class="menu-container"></div>
+        <div id="inscription-button-placeholder" class="inscription-button-container"></div>
         <h1>🧘‍♀️ Pilates</h1>
     </header>
     <main>
@@ -38,7 +46,7 @@
         </article>
     </main>
     <footer>
-        <p>&copy; 2025 Association de Danse</p>
+        <p>&copy; 2025 Association STAR</p>
     </footer>
 </body>
 </html>

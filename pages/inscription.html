@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>STAR - Self Transcendence and Relaxation</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../components/menu.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("menu-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du menu :", error));
+                
+            fetch("../components/button-inscription.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("inscription-button-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du bouton d'inscription :", error));
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu-placeholder" class="menu-container"></div>
+        <div id="inscription-button-placeholder" class="inscription-button-container"></div>
+        <h1>STAR - Self Transcendence and Relaxation</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Formulaire d'inscription</h2>
+            <p>
+                Pour vous inscrire à nos cours de danse, veuillez télécharger le document d'inscription ci-dessous.
+            </p>
+            <p>
+                Ce document contient toutes les informations nécessaires et les instructions pour compléter votre inscription.
+                Une fois rempli, merci de renvoyer la fiche d'inscription, la décharge de responsabilité et droit à l'image ainsi que le règlement.
+                Vous pouvez nous le retourner par e-mail ou par courrier postal.
+                
+            </p>
+            <div class="download-container">
+                <a href="../assets/document/inscription_2025-26.pdf" download class="download-button">
+                    <span class="download-icon">📄</span>
+                    Télécharger le formulaire d'inscription
+                </a>
+            </div>
+            <div class="download-container">
+                <a href="../assets/document/decharge_responsabilite_droit_image.pdf" download class="download-button">
+                    <span class="download-icon">📄</span>
+                    Télécharger la décharge de responsabilité et droit à l'image
+                </a>
+            </div>
+
+            <div class="download-container">
+                <a href="../assets/document/reglement_interieur.pdf" download class="download-button">
+                    <span class="download-icon">📄</span>
+                    Télécharger le règlement intérieur
+                </a>
+            </div>
+            <p class="note">
+                <strong>Note :</strong> Le document est au format PDF. Si vous n'avez pas de lecteur PDF, 
+                vous pouvez en télécharger un gratuitement comme Adobe Reader ou utiliser votre navigateur pour l'ouvrir.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 Association STAR</p>
+    </footer>
+</body>
+</html>

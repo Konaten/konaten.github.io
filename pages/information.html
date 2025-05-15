@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>STAR - Self Transcendence and Relaxation</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../components/menu.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("menu-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du menu :", error));
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu-placeholder" class="menu-container"></div>
+        <h1>Self Transcendence and Relaxation (STAR)</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Informations sur les cours</h2>
+            <p><strong>Adresse :</strong> 52 rue Jean Jaurès, 69100 Villeurbanne</p>
+            <p><strong>Salle :</strong> Salle avec miroir</p>
+            <p><strong>Email :</strong> <a href="mailto:assostar22@gmail.com">assostar22@gmail.com</a></p>
+            <p><strong>Téléphone :</strong> <a href="tel:+33627831314">06 27 83 13 14</a></p>
+
+            <h2>Horaires des cours</h2>
+            <ul>
+                <li><strong>Zumba Fitness :</strong> Lundi 18h30-19h30</li>
+                <li><strong>Flui'danse :</strong> Lundi 19h45-20h45</li>
+                <li><strong>Zumba Kids (7 à 16 ans) :</strong> Mercredi 17h15-18h15</li>
+                <li><strong>Pilates :</strong> Mercredi 18h30-19h30</li>
+            </ul>
+
+            <h2>Tarifs pour la saison 2025</h2>
+            <ul>
+                <li><strong>Zumba adultes :</strong> 210 €</li>
+                <li><strong>Zumba Kids :</strong> 200 €</li>
+                <li><strong>Pilates :</strong> 220 €</li>
+                <li><strong>Flui'danse :</strong> 218 €</li>
+            </ul>
+            <p><em>Du 15-09-2025 au 10-06-2026 - 31 cours</em></p>
+
+            <h2>Offres spéciales</h2>
+            <ul>
+                <li><strong>Parrainage :</strong> -10%</li>
+                <li><strong>2ème activité :</strong> -10% (Offre non cumulable)</li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 Association STAR</p>
+    </footer>
+</body>
+</html>

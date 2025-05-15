@@ -25,6 +25,32 @@ header {
     z-index: 100;
 }
 
+.inscription-button-container {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.btn-inscription {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #5a67d8;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-inscription:hover {
+    background-color: #f0f4ff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .menu {
     position: relative;
     display: inline-block;
@@ -145,4 +171,47 @@ article {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.download-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #5a67d8;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    background-color: #4c56b5;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-icon {
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+.note {
+    background-color: #f0f4ff;
+    border-left: 4px solid #5a67d8;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.logo {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
 }
